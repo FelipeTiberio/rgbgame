@@ -21,7 +21,7 @@ for(let i = 0 ; i < squares.length ; i++){
         if( clickedColor !== goolColor){
             this.style.backgroundColor = "#232323";
             hint.textContent = "Try again.";
-            hint.style.color = "steelblue"
+            hint.style.color = "#232323"
             
         }
         else{
@@ -44,14 +44,14 @@ btn_easy.addEventListener("click", function(){
     goolColor = pickColor();
     colorDiplay.textContent = goolColor;
     hint.textContent = ""
-    h1.style.background = "steelblue";
+    h1.style.background = "#232323";
     
     for(let i = 0; i < colors.length; i++){
         squares[i].style.backgroundColor = colors[i];
     }
 
     for(let i = 3; i < squares.length; i++){
-        squares[i].style.backgroundColor = "steelblue";
+        squares[i].style.backgroundColor = "#232323";
         squares[i].style.display = "none";
     }
 
@@ -86,27 +86,32 @@ function generateRandomColor(number_colors){
     return arr
 }
 
-
 function randomColor(){
     //retorna uma cor no formato rgb(r , g, b) como string;
-    var r = Math.floor( Math.random() * 256);
-    var g = Math.floor( Math.random() * 256);
-    var b = Math.floor( Math.random() * 256);
+    var r = 35; // rgb(35,35,35) é a cor do background
+    var g = 35;
+    var b = 35;
 
-    return "rgb("+ r + ", "+ g +", "+b+")";    
+    while( r === 35 && g === 35 && b === 35 ){
+        r = Math.floor( Math.random() * 256);
+        g = Math.floor( Math.random() * 256);
+        b = Math.floor( Math.random() * 256);
+    }
+    
+    return `rgb(${r}, ${g}, ${b})`;    
 }
 
 function newGame(){
     colors = generateRandomColor(6);
     setSquareColor()
     hint.textContent = "";
-    h1.style.backgroundColor = "steelblue";
+    h1.style.backgroundColor = "#232323";
     goolColor = pickColor();
     colorDiplay.textContent = goolColor;
     btn_reset.textContent = "New Colors";
     btn_hard.classList.add("selected");
     btn_easy.classList.remove("selected");
-    hint.style.color = "steelblue"
+    hint.style.color = "#232323"
 }
 
 function setSquareColor(){

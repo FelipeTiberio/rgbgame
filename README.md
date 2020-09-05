@@ -3,7 +3,12 @@
 # ColorGame :video_game:
 A cada rodada uma cor em rgb é mostrada na tela, são apresentados 
 possiveis colors que corresponde ao código em RGB, o usuário fazer
-um palpite em qual é a cor 
+um palpite em qual é a cor. 
+
+### Para fazer
+
+- [ ] Implementar uma landing page.
+- [ ] Implenebtar o mesmo game mas com hexadecimal.
 
 ### Link para o projeto
 - [TapGame](https://felipetiberio.github.io/rgbgame/)
