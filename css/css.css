@@ -15,6 +15,8 @@ h1{
     padding-top: 1em;
     padding-bottom: 1em;
     font-size: 2rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
 }
 
 #hint{
@@ -30,7 +32,7 @@ h1{
 }
 
 .selected{
-    background-color: steelblue;
+    background-color: #00294f;
     color: white;
 }
 
@@ -41,16 +43,18 @@ h1{
     color: black;
     padding: 0;
     margin: 0;
+    border: 5p solid #750c41;
 }
 
 .square{
-    width: 30%;
+    width: 29%;
     background: purple;
-    padding-bottom: 30%;
+    padding-bottom: 29%;
     float: left;
     margin: 1.66%;
     border-radius: 25px;
     transition: all 0.5s;
+    border: 1px solid  #00294f;
 }
 
 .gonesquare{
@@ -72,13 +76,13 @@ button{
     text-transform: uppercase;
     height: 100%;
     font-weight: 700;
-    color: steelblue;
+    color: #00294f;
     letter-spacing: 1px;
     outline: none;
     transition: all 1s;
 }
 
 button:hover{
-    background-color: steelblue;
+    background-color: #00294f;
     color: white;
 }
